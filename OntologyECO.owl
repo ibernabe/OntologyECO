@@ -1,0 +1,310 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://www.ia.urjc.es/ontologies/eco/"
+     xml:base="https://www.ia.urjc.es/ontologies/eco/"
+     xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:eco="https://www.ia.urjc.es/ontologies/eco/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:pep="https://ci.mines-stetienne.fr/pep/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:ssn="http://www.w3.org/ns/ssn/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:qudt="http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:seas="https://ci.mines-stetienne.fr/seas/"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:saref="http://ontology.tno.nl/saref#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:qudt-unit="http://data.qudt.org/qudt/owl/1.0.0/unit.owl#"
+     xmlns:SystemOntologyExtended="https://ci.mines-stetienne.fr/seas/SystemOntologyExtended#"
+     xmlns:evaluationontology-1.0="https://ci.mines-stetienne.fr/seas/EvaluationOntology-1.0#"
+     xmlns:systemontology-1.1extended="https://ci.mines-stetienne.fr/seas/SystemOntology-1.1Extended#">
+    <owl:Ontology rdf:about="https://www.ia.urjc.es/ontologies/eco/">
+        <owl:versionIRI rdf:resource="https://www.ia.urjc.es/ontologies/eco/"/>
+        <owl:imports rdf:resource="https://ci.mines-stetienne.fr/seas/SystemOntology-1.1"/>    
+        <owl:versionInfo>v1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.w3.org/2003/06/sw-vocab-status/ns#term_status -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/contains -->
+
+    <owl:ObjectProperty rdf:about="https://www.ia.urjc.es/ontologies/eco/contains"/>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/deployedIn -->
+
+    <owl:ObjectProperty rdf:about="https://www.ia.urjc.es/ontologies/eco/deployedIn"/>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/isComposedOf -->
+
+    <owl:ObjectProperty rdf:about="https://www.ia.urjc.es/ontologies/eco/isComposedOf"/>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/localConnectionTo -->
+
+    <owl:ObjectProperty rdf:about="https://www.ia.urjc.es/ontologies/eco/localConnectionTo"/>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/remoteConnectionTo -->
+
+    <owl:ObjectProperty rdf:about="https://www.ia.urjc.es/ontologies/eco/remoteConnectionTo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/cpuLoad -->
+
+    <owl:DatatypeProperty rdf:about="https://www.ia.urjc.es/ontologies/eco/cpuLoad"/>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/cpuRequirement -->
+
+    <owl:DatatypeProperty rdf:about="https://www.ia.urjc.es/ontologies/eco/cpuRequirement"/>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/diskSpaceFree -->
+
+    <owl:DatatypeProperty rdf:about="https://www.ia.urjc.es/ontologies/eco/diskSpaceFree"/>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/diskSpaceRequirement -->
+
+    <owl:DatatypeProperty rdf:about="https://www.ia.urjc.es/ontologies/eco/diskSpaceRequirement"/>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/id -->
+
+    <owl:DatatypeProperty rdf:about="https://www.ia.urjc.es/ontologies/eco/id"/>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/nameSoftware -->
+
+    <owl:DatatypeProperty rdf:about="https://www.ia.urjc.es/ontologies/eco/nameSoftware">
+        <rdfs:domain rdf:resource="https://www.ia.urjc.es/ontologies/eco/Software"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/networkConnectionTechnology -->
+
+    <owl:DatatypeProperty rdf:about="https://www.ia.urjc.es/ontologies/eco/networkConnectionTechnology"/>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/operatingSystem -->
+
+    <owl:DatatypeProperty rdf:about="https://www.ia.urjc.es/ontologies/eco/operatingSystem"/>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/ramMemoryFree -->
+
+    <owl:DatatypeProperty rdf:about="https://www.ia.urjc.es/ontologies/eco/ramMemoryFree"/>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/ramMemoryInstalled -->
+
+    <owl:DatatypeProperty rdf:about="https://www.ia.urjc.es/ontologies/eco/ramMemoryInstalled"/>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/ramRequirement -->
+
+    <owl:DatatypeProperty rdf:about="https://www.ia.urjc.es/ontologies/eco/ramRequirement"/>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/version -->
+
+    <owl:DatatypeProperty rdf:about="https://www.ia.urjc.es/ontologies/eco/version">
+        <rdfs:domain rdf:resource="https://www.ia.urjc.es/ontologies/eco/Software"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/Application -->
+
+    <owl:Class rdf:about="https://www.ia.urjc.es/ontologies/eco/Application">
+        <rdfs:subClassOf rdf:resource="https://www.ia.urjc.es/ontologies/eco/Software"/>
+        <owl:disjointWith rdf:resource="https://www.ia.urjc.es/ontologies/eco/Middleware"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/ComputingNode -->
+
+    <owl:Class rdf:about="https://www.ia.urjc.es/ontologies/eco/ComputingNode">
+        <rdfs:subClassOf rdf:resource="https://ci.mines-stetienne.fr/seas/FeatureOfInterest"/>
+        <owl:disjointWith rdf:resource="https://www.ia.urjc.es/ontologies/eco/Software"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/Middleware -->
+
+    <owl:Class rdf:about="https://www.ia.urjc.es/ontologies/eco/Middleware">
+        <rdfs:subClassOf rdf:resource="https://www.ia.urjc.es/ontologies/eco/Software"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/Service -->
+
+    <owl:Class rdf:about="https://www.ia.urjc.es/ontologies/eco/Service">
+        <rdfs:subClassOf rdf:resource="https://www.ia.urjc.es/ontologies/eco/Software"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/Software -->
+
+    <owl:Class rdf:about="https://www.ia.urjc.es/ontologies/eco/Software">
+        <rdfs:subClassOf rdf:resource="https://ci.mines-stetienne.fr/seas/FeatureOfInterest"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://www.ia.urjc.es/ontologies/eco/Application"/>
+            <rdf:Description rdf:about="https://www.ia.urjc.es/ontologies/eco/Middleware"/>
+            <rdf:Description rdf:about="https://www.ia.urjc.es/ontologies/eco/Service"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
