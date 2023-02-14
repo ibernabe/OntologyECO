@@ -10,7 +10,7 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://www.semanticweb.org/usuario/ontologies/2023/OntologyECOextended">
-        <owl:imports rdf:resource="https://www.ia.urjc.es/ontologies/eco/"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/ibernabe/OntologyECO/main/OntologyECO.owl/"/>
     </owl:Ontology>
     
 
