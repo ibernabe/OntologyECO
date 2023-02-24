@@ -1,0 +1,601 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://www.ia.urjc.es/ontologies/eco/"
+     xml:base="https://www.ia.urjc.es/ontologies/eco/"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:eco="https://www.ia.urjc.es/ontologies/eco/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"f
+     xmlns:seas="https://ci.mines-stetienne.fr/seas/"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://www.ia.urjc.es/ontologies/eco/">
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/ibernabe/OntologyECO/main/OntologyECO.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://ci.mines-stetienne.fr/seas/connectionPointOf -->
+
+    <owl:ObjectProperty rdf:about="https://ci.mines-stetienne.fr/seas/connectionPointOf"/>
+    
+
+
+    <!-- https://ci.mines-stetienne.fr/seas/connectsSystem -->
+
+    <owl:ObjectProperty rdf:about="https://ci.mines-stetienne.fr/seas/connectsSystem"/>
+    
+
+
+    <!-- https://ci.mines-stetienne.fr/seas/connectsSystemThrough -->
+
+    <owl:ObjectProperty rdf:about="https://ci.mines-stetienne.fr/seas/connectsSystemThrough"/>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/contains -->
+
+    <owl:ObjectProperty rdf:about="https://www.ia.urjc.es/ontologies/eco/contains"/>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/deployedIn -->
+
+    <owl:ObjectProperty rdf:about="https://www.ia.urjc.es/ontologies/eco/deployedIn"/>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/isComposedOf -->
+
+    <owl:ObjectProperty rdf:about="https://www.ia.urjc.es/ontologies/eco/isComposedOf"/>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/remoteConnectionTo -->
+
+    <owl:ObjectProperty rdf:about="https://www.ia.urjc.es/ontologies/eco/remoteConnectionTo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/cpuLoad -->
+
+    <owl:DatatypeProperty rdf:about="https://www.ia.urjc.es/ontologies/eco/cpuLoad"/>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/diskSpaceFree -->
+
+    <owl:DatatypeProperty rdf:about="https://www.ia.urjc.es/ontologies/eco/diskSpaceFree"/>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/diskSpaceRequirement -->
+
+    <owl:DatatypeProperty rdf:about="https://www.ia.urjc.es/ontologies/eco/diskSpaceRequirement"/>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/id -->
+
+    <owl:DatatypeProperty rdf:about="https://www.ia.urjc.es/ontologies/eco/id"/>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/networkConnectionTechnology -->
+
+    <owl:DatatypeProperty rdf:about="https://www.ia.urjc.es/ontologies/eco/networkConnectionTechnology"/>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/ramMemoryFree -->
+
+    <owl:DatatypeProperty rdf:about="https://www.ia.urjc.es/ontologies/eco/ramMemoryFree"/>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/ramMemoryInstalled -->
+
+    <owl:DatatypeProperty rdf:about="https://www.ia.urjc.es/ontologies/eco/ramMemoryInstalled"/>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/ramRequirement -->
+
+    <owl:DatatypeProperty rdf:about="https://www.ia.urjc.es/ontologies/eco/ramRequirement"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://ci.mines-stetienne.fr/seas/Connection -->
+
+    <owl:Class rdf:about="https://ci.mines-stetienne.fr/seas/Connection"/>
+    
+
+
+    <!-- https://ci.mines-stetienne.fr/seas/ConnectionPoint -->
+
+    <owl:Class rdf:about="https://ci.mines-stetienne.fr/seas/ConnectionPoint"/>
+    
+
+
+    <!-- https://ci.mines-stetienne.fr/seas/System -->
+
+    <owl:Class rdf:about="https://ci.mines-stetienne.fr/seas/System"/>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/Application -->
+
+    <owl:Class rdf:about="https://www.ia.urjc.es/ontologies/eco/Application"/>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/ComputingNode -->
+
+    <owl:Class rdf:about="https://www.ia.urjc.es/ontologies/eco/ComputingNode"/>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/Middleware -->
+
+    <owl:Class rdf:about="https://www.ia.urjc.es/ontologies/eco/Middleware"/>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/Service -->
+
+    <owl:Class rdf:about="https://www.ia.urjc.es/ontologies/eco/Service"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/App10 -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/App10">
+        <rdf:type rdf:resource="https://www.ia.urjc.es/ontologies/eco/Application"/>
+        <isComposedOf rdf:resource="https://www.ia.urjc.es/ontologies/eco/S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/App11 -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/App11">
+        <rdf:type rdf:resource="https://www.ia.urjc.es/ontologies/eco/Application"/>
+        <isComposedOf rdf:resource="https://www.ia.urjc.es/ontologies/eco/S11"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/App9 -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/App9">
+        <rdf:type rdf:resource="https://www.ia.urjc.es/ontologies/eco/Application"/>
+        <isComposedOf rdf:resource="https://www.ia.urjc.es/ontologies/eco/S9"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/Application1 -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/Application1">
+        <rdf:type rdf:resource="https://www.ia.urjc.es/ontologies/eco/Application"/>
+        <isComposedOf rdf:resource="https://www.ia.urjc.es/ontologies/eco/S1"/>
+        <isComposedOf rdf:resource="https://www.ia.urjc.es/ontologies/eco/S2"/>
+        <isComposedOf rdf:resource="https://www.ia.urjc.es/ontologies/eco/S3"/>
+        <isComposedOf rdf:resource="https://www.ia.urjc.es/ontologies/eco/S4"/>
+        <isComposedOf rdf:resource="https://www.ia.urjc.es/ontologies/eco/S5"/>
+        <isComposedOf rdf:resource="https://www.ia.urjc.es/ontologies/eco/S6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/Application7 -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/Application7">
+        <rdf:type rdf:resource="https://www.ia.urjc.es/ontologies/eco/Application"/>
+        <isComposedOf rdf:resource="https://www.ia.urjc.es/ontologies/eco/S7"/>
+        <id>Application7</id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/Application8 -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/Application8">
+        <rdf:type rdf:resource="https://www.ia.urjc.es/ontologies/eco/Application"/>
+        <isComposedOf rdf:resource="https://www.ia.urjc.es/ontologies/eco/S8"/>
+        <id>Application8</id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/C1 -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/C1">
+        <rdf:type rdf:resource="https://ci.mines-stetienne.fr/seas/Connection"/>
+        <seas:connectsSystem rdf:resource="https://www.ia.urjc.es/ontologies/eco/NodeCloudComputing"/>
+        <seas:connectsSystem rdf:resource="https://www.ia.urjc.es/ontologies/eco/routerNetwork01"/>
+        <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C1</foaf:name>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C1</id>
+        <networkConnectionTechnology>Fiber optics</networkConnectionTechnology>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/C2 -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/C2">
+        <rdf:type rdf:resource="https://ci.mines-stetienne.fr/seas/Connection"/>
+        <seas:connectsSystem rdf:resource="https://www.ia.urjc.es/ontologies/eco/System2"/>
+        <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C2</foaf:name>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C2</id>
+        <networkConnectionTechnology>Ethernet</networkConnectionTechnology>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/C3 -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/C3">
+        <rdf:type rdf:resource="https://ci.mines-stetienne.fr/seas/Connection"/>
+        <seas:connectsSystem rdf:resource="https://www.ia.urjc.es/ontologies/eco/System3"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C3</id>
+        <networkConnectionTechnology>Ethernet</networkConnectionTechnology>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/C4 -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/C4">
+        <rdf:type rdf:resource="https://ci.mines-stetienne.fr/seas/Connection"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C4</id>
+        <networkConnectionTechnology>Zigbee</networkConnectionTechnology>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/C5 -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/C5">
+        <rdf:type rdf:resource="https://ci.mines-stetienne.fr/seas/Connection"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C5</id>
+        <networkConnectionTechnology>Wi-Fi</networkConnectionTechnology>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/C6 -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/C6">
+        <rdf:type rdf:resource="https://ci.mines-stetienne.fr/seas/Connection"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C6</id>
+        <networkConnectionTechnology>LoRaWan</networkConnectionTechnology>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/MiddlewareCloud -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/MiddlewareCloud">
+        <rdf:type rdf:resource="https://www.ia.urjc.es/ontologies/eco/Middleware"/>
+        <deployedIn rdf:resource="https://www.ia.urjc.es/ontologies/eco/NodeCloudComputing"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MiddlewareCloud</id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/MiddlewareFog1 -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/MiddlewareFog1">
+        <rdf:type rdf:resource="https://www.ia.urjc.es/ontologies/eco/Middleware"/>
+        <contains rdf:resource="https://www.ia.urjc.es/ontologies/eco/S3"/>
+        <contains rdf:resource="https://www.ia.urjc.es/ontologies/eco/S4"/>
+        <deployedIn rdf:resource="https://www.ia.urjc.es/ontologies/eco/NodeInFog1"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MiddlewareFog1</id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/MiddlewareFog2 -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/MiddlewareFog2">
+        <rdf:type rdf:resource="https://www.ia.urjc.es/ontologies/eco/Middleware"/>
+        <deployedIn rdf:resource="https://www.ia.urjc.es/ontologies/eco/NodeInFog2"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MiddlewareFog2</id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/NodeCloudComputing -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/NodeCloudComputing">
+        <rdf:type rdf:resource="https://www.ia.urjc.es/ontologies/eco/ComputingNode"/>
+        <contains rdf:resource="https://www.ia.urjc.es/ontologies/eco/MiddlewareCloud"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NodeInCloudComputing</id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/NodeDevice1 -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/NodeDevice1">
+        <rdf:type rdf:resource="https://www.ia.urjc.es/ontologies/eco/ComputingNode"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NodeInDevice1</id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/NodeDevice2 -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/NodeDevice2">
+        <rdf:type rdf:resource="https://www.ia.urjc.es/ontologies/eco/ComputingNode"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NodeInDevice2</id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/NodeDevice3 -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/NodeDevice3">
+        <rdf:type rdf:resource="https://www.ia.urjc.es/ontologies/eco/ComputingNode"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NodeInDevice3</id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/NodeInFog1 -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/NodeInFog1">
+        <rdf:type rdf:resource="https://www.ia.urjc.es/ontologies/eco/ComputingNode"/>
+        <contains rdf:resource="https://www.ia.urjc.es/ontologies/eco/MiddlewareFog1"/>
+        <cpuLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">95</cpuLoad>
+        <diskSpaceFree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</diskSpaceFree>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NodeInFog1</id>
+        <ramMemoryFree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3500</ramMemoryFree>
+        <ramMemoryInstalled rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8000</ramMemoryInstalled>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/NodeInFog2 -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/NodeInFog2">
+        <rdf:type rdf:resource="https://www.ia.urjc.es/ontologies/eco/ComputingNode"/>
+        <contains rdf:resource="https://www.ia.urjc.es/ontologies/eco/MiddlewareFog2"/>
+        <cpuLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</cpuLoad>
+        <diskSpaceFree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000</diskSpaceFree>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NodeInFog2</id>
+        <ramMemoryFree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7000</ramMemoryFree>
+        <ramMemoryInstalled rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8000</ramMemoryInstalled>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/S1 -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/S1">
+        <rdf:type rdf:resource="https://www.ia.urjc.es/ontologies/eco/Service"/>
+        <id>S1</id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/S10 -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/S10">
+        <rdf:type rdf:resource="https://www.ia.urjc.es/ontologies/eco/Service"/>
+        <remoteConnectionTo rdf:resource="https://www.ia.urjc.es/ontologies/eco/S11"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/S11 -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/S11">
+        <rdf:type rdf:resource="https://www.ia.urjc.es/ontologies/eco/Service"/>
+        <remoteConnectionTo rdf:resource="https://www.ia.urjc.es/ontologies/eco/S4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/S2 -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/S2">
+        <rdf:type rdf:resource="https://www.ia.urjc.es/ontologies/eco/Service"/>
+        <deployedIn rdf:resource="https://www.ia.urjc.es/ontologies/eco/NodeDevice2"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S2</id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/S3 -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/S3">
+        <rdf:type rdf:resource="https://www.ia.urjc.es/ontologies/eco/Service"/>
+        <deployedIn rdf:resource="https://www.ia.urjc.es/ontologies/eco/MiddlewareFog1"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S3</id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/S4 -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/S4">
+        <rdf:type rdf:resource="https://www.ia.urjc.es/ontologies/eco/Service"/>
+        <deployedIn rdf:resource="https://www.ia.urjc.es/ontologies/eco/MiddlewareFog1"/>
+        <remoteConnectionTo rdf:resource="https://www.ia.urjc.es/ontologies/eco/S5"/>
+        <diskSpaceRequirement rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</diskSpaceRequirement>
+        <id>S4</id>
+        <ramRequirement rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</ramRequirement>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/S5 -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/S5">
+        <rdf:type rdf:resource="https://www.ia.urjc.es/ontologies/eco/Service"/>
+        <deployedIn rdf:resource="https://www.ia.urjc.es/ontologies/eco/MiddlewareCloud"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S5</id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/S6 -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/S6">
+        <rdf:type rdf:resource="https://www.ia.urjc.es/ontologies/eco/Service"/>
+        <deployedIn rdf:resource="https://www.ia.urjc.es/ontologies/eco/MiddlewareCloud"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S6</id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/S7 -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/S7">
+        <rdf:type rdf:resource="https://www.ia.urjc.es/ontologies/eco/Service"/>
+        <remoteConnectionTo rdf:resource="https://www.ia.urjc.es/ontologies/eco/S4"/>
+        <id>S7</id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/S8 -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/S8">
+        <rdf:type rdf:resource="https://www.ia.urjc.es/ontologies/eco/Service"/>
+        <remoteConnectionTo rdf:resource="https://www.ia.urjc.es/ontologies/eco/S4"/>
+        <id>S8</id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/S9 -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/S9">
+        <rdf:type rdf:resource="https://www.ia.urjc.es/ontologies/eco/Service"/>
+        <remoteConnectionTo rdf:resource="https://www.ia.urjc.es/ontologies/eco/S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/System1 -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/System1">
+        <rdf:type rdf:resource="https://ci.mines-stetienne.fr/seas/System"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/System2 -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/System2">
+        <rdf:type rdf:resource="https://ci.mines-stetienne.fr/seas/System"/>
+        <contains rdf:resource="https://www.ia.urjc.es/ontologies/eco/NodeInFog1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/System3 -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/System3">
+        <rdf:type rdf:resource="https://ci.mines-stetienne.fr/seas/System"/>
+        <contains rdf:resource="https://www.ia.urjc.es/ontologies/eco/NodeInFog2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/System4 -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/System4">
+        <rdf:type rdf:resource="https://ci.mines-stetienne.fr/seas/System"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/System5 -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/System5">
+        <rdf:type rdf:resource="https://ci.mines-stetienne.fr/seas/System"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/System6 -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/System6">
+        <rdf:type rdf:resource="https://ci.mines-stetienne.fr/seas/System"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.ia.urjc.es/ontologies/eco/routerNetwork01 -->
+
+    <owl:NamedIndividual rdf:about="https://www.ia.urjc.es/ontologies/eco/routerNetwork01">
+        <rdf:type rdf:resource="https://ci.mines-stetienne.fr/seas/ConnectionPoint"/>
+        <seas:connectionPointOf rdf:resource="https://www.ia.urjc.es/ontologies/eco/NodeCloudComputing"/>
+        <seas:connectsSystemThrough rdf:resource="https://www.ia.urjc.es/ontologies/eco/C1"/>
+        <seas:connectsSystemThrough rdf:resource="https://www.ia.urjc.es/ontologies/eco/C2"/>
+        <seas:connectsSystemThrough rdf:resource="https://www.ia.urjc.es/ontologies/eco/C3"/>
+        <id>routerNetwork01</id>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
