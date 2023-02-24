@@ -12,7 +12,7 @@
      xmlns:seas="https://ci.mines-stetienne.fr/seas/"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="https://www.ia.urjc.es/ontologies/eco/">
+    <owl:Ontology rdf:about="https://www.ia.urjc.es/ontologies/eco/instances">
         <owl:imports rdf:resource="https://raw.githubusercontent.com/ibernabe/OntologyECO/main/OntologyECO.owl"/>
     </owl:Ontology>
     
