@@ -73,20 +73,20 @@ vs:term_status rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  https://www.ia.urjc.es/ontologies/eco/hasProblem
-<https://www.ia.urjc.es/ontologies/eco/hasProblem> rdf:type owl:ObjectProperty ,
-                                                       owl:FunctionalProperty ,
-                                                       owl:InverseFunctionalProperty ;
-                                              rdfs:domain <https://www.ia.urjc.es/ontologies/eco/Problem> ,
-                                                          eco:ComputingNode .
-
-
 ###  https://www.ia.urjc.es/ontologies/eco/contains
 eco:contains rdf:type owl:ObjectProperty .
 
 
 ###  https://www.ia.urjc.es/ontologies/eco/deployedIn
 eco:deployedIn rdf:type owl:ObjectProperty .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/hasProblem
+eco:hasProblem rdf:type owl:ObjectProperty ,
+                        owl:FunctionalProperty ,
+                        owl:InverseFunctionalProperty ;
+               rdfs:domain eco:ComputingNode ,
+                           eco:Problem .
 
 
 ###  https://www.ia.urjc.es/ontologies/eco/isComposedOf
@@ -114,117 +114,15 @@ foaf:name rdf:type owl:DatatypeProperty .
 
 
 ###  https://www.ia.urjc.es/ontologies/eco/abnormalReading
-<https://www.ia.urjc.es/ontologies/eco/abnormalReading> rdf:type owl:DatatypeProperty ;
-                                                        rdfs:domain <https://www.ia.urjc.es/ontologies/eco/DataCollectionFailed> ;
-                                                        rdfs:range xsd:string .
+eco:abnormalReading rdf:type owl:DatatypeProperty ;
+                    rdfs:domain eco:DataCollectionFailed ;
+                    rdfs:range xsd:string .
 
 
 ###  https://www.ia.urjc.es/ontologies/eco/connectedToNetwork
-<https://www.ia.urjc.es/ontologies/eco/connectedToNetwork> rdf:type owl:DatatypeProperty ;
-                                                           rdfs:domain <https://www.ia.urjc.es/ontologies/eco/Comunication> ;
-                                                           rdfs:range xsd:boolean .
-
-
-###  https://www.ia.urjc.es/ontologies/eco/discardedPackets
-<https://www.ia.urjc.es/ontologies/eco/discardedPackets> rdf:type owl:DatatypeProperty ;
-                                                         rdfs:subPropertyOf owl:topDataProperty ;
-                                                         rdfs:domain <https://www.ia.urjc.es/ontologies/eco/Comunication> ;
-                                                         rdfs:range xsd:integer .
-
-
-###  https://www.ia.urjc.es/ontologies/eco/excessiveLuminosity
-<https://www.ia.urjc.es/ontologies/eco/excessiveLuminosity> rdf:type owl:DatatypeProperty ;
-                                                            rdfs:domain <https://www.ia.urjc.es/ontologies/eco/ProblemWithEnviromentPhysics> ;
-                                                            rdfs:range xsd:string .
-
-
-###  https://www.ia.urjc.es/ontologies/eco/freeDiskSpace
-<https://www.ia.urjc.es/ontologies/eco/freeDiskSpace> rdf:type owl:DatatypeProperty ;
-                                                      rdfs:subPropertyOf owl:topDataProperty ;
-                                                      rdfs:domain <https://www.ia.urjc.es/ontologies/eco/DeviceInCriticalStatus> ;
-                                                      rdfs:range xsd:long .
-
-
-###  https://www.ia.urjc.es/ontologies/eco/lackOfLuminosity
-<https://www.ia.urjc.es/ontologies/eco/lackOfLuminosity> rdf:type owl:DatatypeProperty ;
-                                                         rdfs:domain <https://www.ia.urjc.es/ontologies/eco/ProblemWithEnviromentPhysics> ;
-                                                         rdfs:range xsd:string .
-
-
-###  https://www.ia.urjc.es/ontologies/eco/mechanismActivationFailed
-<https://www.ia.urjc.es/ontologies/eco/mechanismActivationFailed> rdf:type owl:DatatypeProperty ;
-                                                                  rdfs:subPropertyOf owl:topDataProperty ;
-                                                                  rdfs:domain <https://www.ia.urjc.es/ontologies/eco/ErrorMechanism> ;
-                                                                  rdfs:range xsd:boolean .
-
-
-###  https://www.ia.urjc.es/ontologies/eco/packagesReceived
-<https://www.ia.urjc.es/ontologies/eco/packagesReceived> rdf:type owl:DatatypeProperty ;
-                                                         rdfs:domain <https://www.ia.urjc.es/ontologies/eco/Comunication> ;
-                                                         rdfs:range xsd:integer .
-
-
-###  https://www.ia.urjc.es/ontologies/eco/packagesSent
-<https://www.ia.urjc.es/ontologies/eco/packagesSent> rdf:type owl:DatatypeProperty ;
-                                                     rdfs:domain <https://www.ia.urjc.es/ontologies/eco/Comunication> ;
-                                                     rdfs:range xsd:integer .
-
-
-###  https://www.ia.urjc.es/ontologies/eco/packetsDiscarded
-<https://www.ia.urjc.es/ontologies/eco/packetsDiscarded> rdf:type owl:DatatypeProperty ;
-                                                         rdfs:domain <https://www.ia.urjc.es/ontologies/eco/Comunication> ;
-                                                         rdfs:range xsd:long .
-
-
-###  https://www.ia.urjc.es/ontologies/eco/percentCPUUsage
-<https://www.ia.urjc.es/ontologies/eco/percentCPUUsage> rdf:type owl:DatatypeProperty ;
-                                                        rdfs:subPropertyOf owl:topDataProperty ;
-                                                        rdfs:domain <https://www.ia.urjc.es/ontologies/eco/DeviceInCriticalStatus> ;
-                                                        rdfs:range xsd:integer .
-
-
-###  https://www.ia.urjc.es/ontologies/eco/percentageChargeBattery
-<https://www.ia.urjc.es/ontologies/eco/percentageChargeBattery> rdf:type owl:DatatypeProperty ;
-                                                                rdfs:domain <https://www.ia.urjc.es/ontologies/eco/DeviceInCriticalStatus> ;
-                                                                rdfs:range xsd:integer .
-
-
-###  https://www.ia.urjc.es/ontologies/eco/percentageRAMMemoryUsage
-<https://www.ia.urjc.es/ontologies/eco/percentageRAMMemoryUsage> rdf:type owl:DatatypeProperty ;
-                                                                 rdfs:subPropertyOf owl:topDataProperty ;
-                                                                 rdfs:domain <https://www.ia.urjc.es/ontologies/eco/DeviceInCriticalStatus> ;
-                                                                 rdfs:range xsd:integer .
-
-
-###  https://www.ia.urjc.es/ontologies/eco/readingOutBounds
-<https://www.ia.urjc.es/ontologies/eco/readingOutBounds> rdf:type owl:DatatypeProperty ;
-                                                         rdfs:domain <https://www.ia.urjc.es/ontologies/eco/DataCollectionFailed> ;
-                                                         rdfs:range xsd:float .
-
-
-###  https://www.ia.urjc.es/ontologies/eco/softwareIsRunnig
-<https://www.ia.urjc.es/ontologies/eco/softwareIsRunnig> rdf:type owl:DatatypeProperty ;
-                                                         rdfs:domain <https://www.ia.urjc.es/ontologies/eco/SoftwareMalfunction> ;
-                                                         rdfs:range xsd:boolean .
-
-
-###  https://www.ia.urjc.es/ontologies/eco/status
-<https://www.ia.urjc.es/ontologies/eco/status> rdf:type owl:DatatypeProperty ;
-                                               rdfs:subPropertyOf owl:topDataProperty ;
-                                               rdfs:domain <https://www.ia.urjc.es/ontologies/eco/Problem> ;
-                                               rdfs:range xsd:string .
-
-
-###  https://www.ia.urjc.es/ontologies/eco/temperatureDevice
-<https://www.ia.urjc.es/ontologies/eco/temperatureDevice> rdf:type owl:DatatypeProperty ;
-                                                          rdfs:domain <https://www.ia.urjc.es/ontologies/eco/DeviceInCriticalStatus> ;
-                                                          rdfs:range xsd:integer .
-
-
-###  https://www.ia.urjc.es/ontologies/eco/timestamp
-<https://www.ia.urjc.es/ontologies/eco/timestamp> rdf:type owl:DatatypeProperty ;
-                                                  rdfs:domain <https://www.ia.urjc.es/ontologies/eco/Problem> ;
-                                                  rdfs:range xsd:long .
+eco:connectedToNetwork rdf:type owl:DatatypeProperty ;
+                       rdfs:domain eco:Comunication ;
+                       rdfs:range xsd:boolean .
 
 
 ###  https://www.ia.urjc.es/ontologies/eco/cpuLoad
@@ -239,17 +137,54 @@ eco:cpuRequirement rdf:type owl:DatatypeProperty .
 eco:date rdf:type owl:DatatypeProperty .
 
 
+###  https://www.ia.urjc.es/ontologies/eco/discardedPackets
+eco:discardedPackets rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty ;
+                     rdfs:domain eco:Comunication ;
+                     rdfs:range xsd:integer .
+
+
 ###  https://www.ia.urjc.es/ontologies/eco/diskSpaceRequirement
 eco:diskSpaceRequirement rdf:type owl:DatatypeProperty .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/errorInMechanism
+eco:errorInMechanism rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty ;
+                     rdfs:domain eco:ErrorMechanism ;
+                     rdfs:range xsd:boolean .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/excessiveLuminosity
+eco:excessiveLuminosity rdf:type owl:DatatypeProperty ;
+                        rdfs:domain eco:ProblemWithEnviromentPhysics ;
+                        rdfs:range xsd:string .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/freeDiskSpace
+eco:freeDiskSpace rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain eco:DeviceInCriticalStatus ;
+                  rdfs:range xsd:long .
 
 
 ###  https://www.ia.urjc.es/ontologies/eco/id
 eco:id rdf:type owl:DatatypeProperty .
 
 
+###  https://www.ia.urjc.es/ontologies/eco/ipAddress
+eco:ipAddress rdf:type owl:DatatypeProperty .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/lackOfLuminosity
+eco:lackOfLuminosity rdf:type owl:DatatypeProperty ;
+                     rdfs:domain eco:ProblemWithEnviromentPhysics ;
+                     rdfs:range xsd:string .
+
+
 ###  https://www.ia.urjc.es/ontologies/eco/messageErrorSoftware
 eco:messageErrorSoftware rdf:type owl:DatatypeProperty ;
-                         rdfs:domain <https://www.ia.urjc.es/ontologies/eco/SoftwareMalfunction> ;
+                         rdfs:domain eco:SoftwareMalfunction ;
                          rdfs:range xsd:string .
 
 
@@ -266,8 +201,46 @@ eco:networkConnectionTechnology rdf:type owl:DatatypeProperty .
 eco:operatingSystem rdf:type owl:DatatypeProperty .
 
 
-###  https://www.ia.urjc.es/ontologies/eco/percentageSpaceUsedInDisk
-eco:percentageSpaceUsedInDisk rdf:type owl:DatatypeProperty .
+###  https://www.ia.urjc.es/ontologies/eco/packagesReceived
+eco:packagesReceived rdf:type owl:DatatypeProperty ;
+                     rdfs:domain eco:Comunication ;
+                     rdfs:range xsd:integer .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/packagesSent
+eco:packagesSent rdf:type owl:DatatypeProperty ;
+                 rdfs:domain eco:Comunication ;
+                 rdfs:range xsd:integer .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/packetsDiscarded
+eco:packetsDiscarded rdf:type owl:DatatypeProperty ;
+                     rdfs:domain eco:Comunication ;
+                     rdfs:range xsd:long .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/percentCPUUsage
+eco:percentCPUUsage rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain eco:DeviceInCriticalStatus ;
+                    rdfs:range xsd:integer .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/percentageChargeBattery
+eco:percentageChargeBattery rdf:type owl:DatatypeProperty ;
+                            rdfs:domain eco:DeviceInCriticalStatus ;
+                            rdfs:range xsd:integer .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/percentageDiskUsed
+eco:percentageDiskUsed rdf:type owl:DatatypeProperty .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/percentageRAMUsage
+eco:percentageRAMUsage rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdfs:domain eco:DeviceInCriticalStatus ;
+                       rdfs:range xsd:integer .
 
 
 ###  https://www.ia.urjc.es/ontologies/eco/ramMemoryFree
@@ -280,6 +253,37 @@ eco:ramMemoryInstalled rdf:type owl:DatatypeProperty .
 
 ###  https://www.ia.urjc.es/ontologies/eco/ramRequirement
 eco:ramRequirement rdf:type owl:DatatypeProperty .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/readingOutBounds
+eco:readingOutBounds rdf:type owl:DatatypeProperty ;
+                     rdfs:domain eco:DataCollectionFailed ;
+                     rdfs:range xsd:float .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/softwareIsRunnig
+eco:softwareIsRunnig rdf:type owl:DatatypeProperty ;
+                     rdfs:domain eco:SoftwareMalfunction ;
+                     rdfs:range xsd:boolean .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/status
+eco:status rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdfs:domain eco:Problem ;
+           rdfs:range xsd:string .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/temperatureDevice
+eco:temperatureDevice rdf:type owl:DatatypeProperty ;
+                      rdfs:domain eco:DeviceInCriticalStatus ;
+                      rdfs:range xsd:integer .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/timestamp
+eco:timestamp rdf:type owl:DatatypeProperty ;
+              rdfs:domain eco:Problem ;
+              rdfs:range xsd:long .
 
 
 ###  https://www.ia.urjc.es/ontologies/eco/version
@@ -303,40 +307,6 @@ seas:ConnectionPoint rdf:type owl:Class .
 seas:System rdf:type owl:Class .
 
 
-###  https://www.ia.urjc.es/ontologies/eco/Comunication
-<https://www.ia.urjc.es/ontologies/eco/Comunication> rdf:type owl:Class ;
-                                                     rdfs:subClassOf <https://www.ia.urjc.es/ontologies/eco/Problem> .
-
-
-###  https://www.ia.urjc.es/ontologies/eco/DataCollectionFailed
-<https://www.ia.urjc.es/ontologies/eco/DataCollectionFailed> rdf:type owl:Class ;
-                                                             rdfs:subClassOf <https://www.ia.urjc.es/ontologies/eco/Problem> .
-
-
-###  https://www.ia.urjc.es/ontologies/eco/DeviceInCriticalStatus
-<https://www.ia.urjc.es/ontologies/eco/DeviceInCriticalStatus> rdf:type owl:Class ;
-                                                               rdfs:subClassOf <https://www.ia.urjc.es/ontologies/eco/Problem> .
-
-
-###  https://www.ia.urjc.es/ontologies/eco/ErrorMechanism
-<https://www.ia.urjc.es/ontologies/eco/ErrorMechanism> rdf:type owl:Class ;
-                                                       rdfs:subClassOf <https://www.ia.urjc.es/ontologies/eco/Problem> .
-
-
-###  https://www.ia.urjc.es/ontologies/eco/Problem
-<https://www.ia.urjc.es/ontologies/eco/Problem> rdf:type owl:Class .
-
-
-###  https://www.ia.urjc.es/ontologies/eco/ProblemWithEnviromentPhysics
-<https://www.ia.urjc.es/ontologies/eco/ProblemWithEnviromentPhysics> rdf:type owl:Class ;
-                                                                     rdfs:subClassOf <https://www.ia.urjc.es/ontologies/eco/Problem> .
-
-
-###  https://www.ia.urjc.es/ontologies/eco/SoftwareMalfunction
-<https://www.ia.urjc.es/ontologies/eco/SoftwareMalfunction> rdf:type owl:Class ;
-                                                            rdfs:subClassOf <https://www.ia.urjc.es/ontologies/eco/Problem> .
-
-
 ###  https://www.ia.urjc.es/ontologies/eco/Application
 eco:Application rdf:type owl:Class ;
                 rdfs:subClassOf eco:Software ;
@@ -347,10 +317,30 @@ eco:Application rdf:type owl:Class ;
 eco:ComputingNode rdf:type owl:Class ;
                   rdfs:subClassOf seas:FeatureOfInterest ,
                                   [ rdf:type owl:Restriction ;
-                                    owl:onProperty <https://www.ia.urjc.es/ontologies/eco/hasProblem> ;
-                                    owl:someValuesFrom <https://www.ia.urjc.es/ontologies/eco/Problem>
+                                    owl:onProperty eco:hasProblem ;
+                                    owl:someValuesFrom eco:Problem
                                   ] ;
                   owl:disjointWith eco:Software .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/Comunication
+eco:Comunication rdf:type owl:Class ;
+                 rdfs:subClassOf eco:Problem .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/DataCollectionFailed
+eco:DataCollectionFailed rdf:type owl:Class ;
+                         rdfs:subClassOf eco:Problem .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/DeviceInCriticalStatus
+eco:DeviceInCriticalStatus rdf:type owl:Class ;
+                           rdfs:subClassOf eco:Problem .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/ErrorMechanism
+eco:ErrorMechanism rdf:type owl:Class ;
+                   rdfs:subClassOf eco:Problem .
 
 
 ###  https://www.ia.urjc.es/ontologies/eco/Event
@@ -362,6 +352,15 @@ eco:Middleware rdf:type owl:Class ;
                rdfs:subClassOf eco:Software .
 
 
+###  https://www.ia.urjc.es/ontologies/eco/Problem
+eco:Problem rdf:type owl:Class .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/ProblemWithEnviromentPhysics
+eco:ProblemWithEnviromentPhysics rdf:type owl:Class ;
+                                 rdfs:subClassOf eco:Problem .
+
+
 ###  https://www.ia.urjc.es/ontologies/eco/Service
 eco:Service rdf:type owl:Class ;
             rdfs:subClassOf eco:Software .
@@ -371,9 +370,14 @@ eco:Service rdf:type owl:Class ;
 eco:Software rdf:type owl:Class ;
              rdfs:subClassOf seas:FeatureOfInterest ,
                              [ rdf:type owl:Restriction ;
-                               owl:onProperty <https://www.ia.urjc.es/ontologies/eco/hasProblem> ;
-                               owl:someValuesFrom <https://www.ia.urjc.es/ontologies/eco/Problem>
+                               owl:onProperty eco:hasProblem ;
+                               owl:someValuesFrom eco:Problem
                              ] .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/SoftwareMalfunction
+eco:SoftwareMalfunction rdf:type owl:Class ;
+                        rdfs:subClassOf eco:Problem .
 
 
 #################################################################
