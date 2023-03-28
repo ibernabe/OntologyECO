@@ -148,11 +148,11 @@ eco:discardedPackets rdf:type owl:DatatypeProperty ;
 eco:diskSpaceRequirement rdf:type owl:DatatypeProperty .
 
 
-###  https://www.ia.urjc.es/ontologies/eco/errorInMechanism
-eco:errorInMechanism rdf:type owl:DatatypeProperty ;
-                     rdfs:subPropertyOf owl:topDataProperty ;
-                     rdfs:domain eco:ErrorMechanism ;
-                     rdfs:range xsd:boolean .
+###  https://www.ia.urjc.es/ontologies/eco/errorInPhysicalMechanism
+eco:errorInPhysicalMechanism rdf:type owl:DatatypeProperty ;
+                             rdfs:subPropertyOf owl:topDataProperty ;
+                             rdfs:domain eco:ErrorMechanism ;
+                             rdfs:range xsd:boolean .
 
 
 ###  https://www.ia.urjc.es/ontologies/eco/excessiveLuminosity
@@ -255,10 +255,10 @@ eco:ramMemoryInstalled rdf:type owl:DatatypeProperty .
 eco:ramRequirement rdf:type owl:DatatypeProperty .
 
 
-###  https://www.ia.urjc.es/ontologies/eco/readingOutBounds
-eco:readingOutBounds rdf:type owl:DatatypeProperty ;
-                     rdfs:domain eco:DataCollectionFailed ;
-                     rdfs:range xsd:float .
+###  https://www.ia.urjc.es/ontologies/eco/readingOutOfBounds
+eco:readingOutOfBounds rdf:type owl:DatatypeProperty ;
+                       rdfs:domain eco:DataCollectionFailed ;
+                       rdfs:range xsd:float .
 
 
 ###  https://www.ia.urjc.es/ontologies/eco/softwareIsRunnig
