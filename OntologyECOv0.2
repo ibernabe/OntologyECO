@@ -126,7 +126,8 @@ eco:abnormalReading rdf:type owl:DatatypeProperty ;
 
 
 ###  https://www.ia.urjc.es/ontologies/eco/actionsCarriedOut
-eco:actionsCarriedOut rdf:type owl:DatatypeProperty .
+eco:actionsCarriedOut rdf:type owl:DatatypeProperty ;
+                      rdfs:domain eco:Middleware .
 
 
 ###  https://www.ia.urjc.es/ontologies/eco/batteryChargeLevel
@@ -142,7 +143,8 @@ eco:connectedToNetwork rdf:type owl:DatatypeProperty ;
 
 
 ###  https://www.ia.urjc.es/ontologies/eco/connectedToTheNetwork
-eco:connectedToTheNetwork rdf:type owl:DatatypeProperty .
+eco:connectedToTheNetwork rdf:type owl:DatatypeProperty ;
+                          rdfs:domain eco:ComputingNode .
 
 
 ###  https://www.ia.urjc.es/ontologies/eco/cpuLoad
@@ -237,11 +239,13 @@ eco:networkConnectionTechnology rdf:type owl:DatatypeProperty .
 
 
 ###  https://www.ia.urjc.es/ontologies/eco/numContainersDeployed
-eco:numContainersDeployed rdf:type owl:DatatypeProperty .
+eco:numContainersDeployed rdf:type owl:DatatypeProperty ;
+                          rdfs:domain eco:Middleware .
 
 
 ###  https://www.ia.urjc.es/ontologies/eco/numContainersRunning
-eco:numContainersRunning rdf:type owl:DatatypeProperty .
+eco:numContainersRunning rdf:type owl:DatatypeProperty ;
+                         rdfs:domain eco:Middleware .
 
 
 ###  https://www.ia.urjc.es/ontologies/eco/operatingSystem
@@ -261,7 +265,8 @@ eco:packetsSent rdf:type owl:DatatypeProperty ;
 
 
 ###  https://www.ia.urjc.es/ontologies/eco/percentageOfDiskUsed
-eco:percentageOfDiskUsed rdf:type owl:DatatypeProperty .
+eco:percentageOfDiskUsed rdf:type owl:DatatypeProperty ;
+                         rdfs:domain eco:ComputingNode .
 
 
 ###  https://www.ia.urjc.es/ontologies/eco/percentageOfRAMused
