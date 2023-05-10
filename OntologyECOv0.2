@@ -182,10 +182,14 @@ eco:droppedPackets rdf:type owl:DatatypeProperty ;
                    rdfs:range xsd:long .
 
 
+###  https://www.ia.urjc.es/ontologies/eco/errorDescription
+eco:errorDescription rdf:type owl:DatatypeProperty .
+
+
 ###  https://www.ia.urjc.es/ontologies/eco/errorInPhysicalMechanism
 eco:errorInPhysicalMechanism rdf:type owl:DatatypeProperty ;
                              rdfs:subPropertyOf owl:topDataProperty ;
-                             rdfs:domain eco:ErrorMechanism ;
+                             rdfs:domain eco:MechanismError ;
                              rdfs:range xsd:boolean .
 
 
@@ -194,6 +198,10 @@ eco:freeDiskSpace rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf owl:topDataProperty ;
                   rdfs:domain eco:DeviceInCriticalStatus ;
                   rdfs:range xsd:long .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/freeRAM
+eco:freeRAM rdf:type owl:DatatypeProperty .
 
 
 ###  https://www.ia.urjc.es/ontologies/eco/highLightConditions
@@ -288,6 +296,14 @@ eco:ramMemoryInstalled rdf:type owl:DatatypeProperty .
 eco:ramRequirement rdf:type owl:DatatypeProperty .
 
 
+###  https://www.ia.urjc.es/ontologies/eco/receivedPackets
+eco:receivedPackets rdf:type owl:DatatypeProperty .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/sentPackets
+eco:sentPackets rdf:type owl:DatatypeProperty .
+
+
 ###  https://www.ia.urjc.es/ontologies/eco/softwareIsRunnig
 eco:softwareIsRunnig rdf:type owl:DatatypeProperty ;
                      rdfs:domain eco:SoftwareMalfunction ;
@@ -359,13 +375,13 @@ eco:DeviceInCriticalStatus rdf:type owl:Class ;
                            rdfs:subClassOf eco:Problem .
 
 
-###  https://www.ia.urjc.es/ontologies/eco/ErrorMechanism
-eco:ErrorMechanism rdf:type owl:Class ;
-                   rdfs:subClassOf eco:Problem .
-
-
 ###  https://www.ia.urjc.es/ontologies/eco/Event
 eco:Event rdf:type owl:Class .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/MechanismError
+eco:MechanismError rdf:type owl:Class ;
+                   rdfs:subClassOf eco:Problem .
 
 
 ###  https://www.ia.urjc.es/ontologies/eco/Middleware
