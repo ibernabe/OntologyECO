@@ -1,0 +1,539 @@
+@prefix : <https://www.ia.urjc.es/ontologies/eco/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix eco: <https://www.ia.urjc.es/ontologies/eco/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pep: <https://ci.mines-stetienne.fr/pep/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix qudt: <http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seas: <https://ci.mines-stetienne.fr/seas/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix saref: <http://ontology.tno.nl/saref#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix qudt-unit: <http://data.qudt.org/qudt/owl/1.0.0/unit.owl#> .
+@prefix SystemOntologyExtended: <https://ci.mines-stetienne.fr/seas/SystemOntologyExtended#> .
+@prefix evaluationontology-1.0: <https://ci.mines-stetienne.fr/seas/EvaluationOntology-1.0#> .
+@prefix systemontology-1.1extended: <https://ci.mines-stetienne.fr/seas/SystemOntology-1.1Extended#> .
+@base <https://www.ia.urjc.es/ontologies/eco/> .
+
+<https://www.ia.urjc.es/ontologies/eco/> rdf:type owl:Ontology ;
+                                          owl:versionIRI <https://www.ia.urjc.es/ontologies/eco/> ;
+                                          owl:imports seas:SystemOntology-1.1 ;
+                                          owl:versionInfo "v0.2" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+dcterms:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dcterms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+dcterms:issued rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dcterms:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
+vs:term_status rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://www.ia.urjc.es/ontologies/eco/contains
+eco:contains rdf:type owl:ObjectProperty .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/deployedIn
+eco:deployedIn rdf:type owl:ObjectProperty .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/hasProblem
+eco:hasProblem rdf:type owl:ObjectProperty ,
+                        owl:FunctionalProperty ,
+                        owl:InverseFunctionalProperty ;
+               rdfs:domain eco:ComputingNode ,
+                           eco:Problem .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/isComposedOf
+eco:isComposedOf rdf:type owl:ObjectProperty .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/localConnectionTo
+eco:localConnectionTo rdf:type owl:ObjectProperty .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/related_to
+eco:related_to rdf:type owl:ObjectProperty .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/remoteConnectionTo
+eco:remoteConnectionTo rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:DatatypeProperty .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/OutOfRangeReading
+eco:OutOfRangeReading rdf:type owl:DatatypeProperty ;
+                      rdfs:domain eco:DataCollectionFailed ;
+                      rdfs:range xsd:float .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/abnormalReading
+eco:abnormalReading rdf:type owl:DatatypeProperty ;
+                    rdfs:domain eco:DataCollectionFailed ;
+                    rdfs:range xsd:string .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/actionsCarriedOut
+eco:actionsCarriedOut rdf:type owl:DatatypeProperty ;
+                      rdfs:domain eco:Middleware .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/batteryChargeLevel
+eco:batteryChargeLevel rdf:type owl:DatatypeProperty ;
+                       rdfs:domain eco:DeviceInCriticalStatus ;
+                       rdfs:range xsd:integer .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/connectedToNetwork
+eco:connectedToNetwork rdf:type owl:DatatypeProperty ;
+                       rdfs:domain eco:ConnectionFailed ;
+                       rdfs:range xsd:boolean .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/connectedToTheNetwork
+eco:connectedToTheNetwork rdf:type owl:DatatypeProperty ;
+                          rdfs:domain eco:ComputingNode .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/cpuLoad
+eco:cpuLoad rdf:type owl:DatatypeProperty .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/cpuRequirement
+eco:cpuRequirement rdf:type owl:DatatypeProperty .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/date
+eco:date rdf:type owl:DatatypeProperty .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/deviceTemperature
+eco:deviceTemperature rdf:type owl:DatatypeProperty ;
+                      rdfs:domain eco:DeviceInCriticalStatus ;
+                      rdfs:range xsd:integer .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/discardedPackets
+eco:discardedPackets rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty ;
+                     rdfs:domain eco:ConnectionFailed ;
+                     rdfs:range xsd:integer .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/diskSpaceRequirement
+eco:diskSpaceRequirement rdf:type owl:DatatypeProperty .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/droppedPackets
+eco:droppedPackets rdf:type owl:DatatypeProperty ;
+                   rdfs:domain eco:ConnectionFailed ;
+                   rdfs:range xsd:long .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/errorInPhysicalMechanism
+eco:errorInPhysicalMechanism rdf:type owl:DatatypeProperty ;
+                             rdfs:subPropertyOf owl:topDataProperty ;
+                             rdfs:domain eco:ErrorMechanism ;
+                             rdfs:range xsd:boolean .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/freeDiskSpace
+eco:freeDiskSpace rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain eco:DeviceInCriticalStatus ;
+                  rdfs:range xsd:long .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/highLightConditions
+eco:highLightConditions rdf:type owl:DatatypeProperty ;
+                        rdfs:domain eco:ProblemWithEnviromentPhysics ;
+                        rdfs:range xsd:string .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/id
+eco:id rdf:type owl:DatatypeProperty .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/ipAddress
+eco:ipAddress rdf:type owl:DatatypeProperty .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/lowLightConditions
+eco:lowLightConditions rdf:type owl:DatatypeProperty ;
+                       rdfs:domain eco:ProblemWithEnviromentPhysics ;
+                       rdfs:range xsd:string .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/meanPercentageUseOfCPU
+eco:meanPercentageUseOfCPU rdf:type owl:DatatypeProperty ;
+                           rdfs:subPropertyOf owl:topDataProperty ;
+                           rdfs:domain eco:DeviceInCriticalStatus ;
+                           rdfs:range xsd:integer .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/messageErrorSoftware
+eco:messageErrorSoftware rdf:type owl:DatatypeProperty ;
+                         rdfs:domain eco:SoftwareMalfunction ;
+                         rdfs:range xsd:string .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/nameSoftware
+eco:nameSoftware rdf:type owl:DatatypeProperty ;
+                 rdfs:domain eco:Software .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/networkConnectionTechnology
+eco:networkConnectionTechnology rdf:type owl:DatatypeProperty .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/numContainersDeployed
+eco:numContainersDeployed rdf:type owl:DatatypeProperty ;
+                          rdfs:domain eco:Middleware .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/numContainersRunning
+eco:numContainersRunning rdf:type owl:DatatypeProperty ;
+                         rdfs:domain eco:Middleware .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/operatingSystem
+eco:operatingSystem rdf:type owl:DatatypeProperty .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/packetsReceived
+eco:packetsReceived rdf:type owl:DatatypeProperty ;
+                    rdfs:domain eco:ConnectionFailed ;
+                    rdfs:range xsd:integer .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/packetsSent
+eco:packetsSent rdf:type owl:DatatypeProperty ;
+                rdfs:domain eco:ConnectionFailed ;
+                rdfs:range xsd:integer .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/percentageOfDiskUsed
+eco:percentageOfDiskUsed rdf:type owl:DatatypeProperty ;
+                         rdfs:domain eco:ComputingNode .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/percentageOfRAMused
+eco:percentageOfRAMused rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:topDataProperty ;
+                        rdfs:domain eco:DeviceInCriticalStatus ;
+                        rdfs:range xsd:integer .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/ramMemoryFree
+eco:ramMemoryFree rdf:type owl:DatatypeProperty .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/ramMemoryInstalled
+eco:ramMemoryInstalled rdf:type owl:DatatypeProperty .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/ramRequirement
+eco:ramRequirement rdf:type owl:DatatypeProperty .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/softwareIsRunnig
+eco:softwareIsRunnig rdf:type owl:DatatypeProperty ;
+                     rdfs:domain eco:SoftwareMalfunction ;
+                     rdfs:range xsd:boolean .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/status
+eco:status rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdfs:domain eco:Problem ;
+           rdfs:range xsd:string .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/timestamp
+eco:timestamp rdf:type owl:DatatypeProperty ;
+              rdfs:domain eco:Problem ;
+              rdfs:range xsd:long .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/version
+eco:version rdf:type owl:DatatypeProperty ;
+            rdfs:domain eco:Software .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://ci.mines-stetienne.fr/seas/Connection
+seas:Connection rdf:type owl:Class .
+
+
+###  https://ci.mines-stetienne.fr/seas/ConnectionPoint
+seas:ConnectionPoint rdf:type owl:Class .
+
+
+###  https://ci.mines-stetienne.fr/seas/System
+seas:System rdf:type owl:Class .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/Application
+eco:Application rdf:type owl:Class ;
+                rdfs:subClassOf eco:Software ;
+                owl:disjointWith eco:Middleware .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/ComputingNode
+eco:ComputingNode rdf:type owl:Class ;
+                  rdfs:subClassOf seas:FeatureOfInterest ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty eco:hasProblem ;
+                                    owl:someValuesFrom eco:Problem
+                                  ] .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/ConnectionFailed
+eco:ConnectionFailed rdf:type owl:Class ;
+                     rdfs:subClassOf eco:Problem .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/DataCollectionFailed
+eco:DataCollectionFailed rdf:type owl:Class ;
+                         rdfs:subClassOf eco:Problem .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/DeviceInCriticalStatus
+eco:DeviceInCriticalStatus rdf:type owl:Class ;
+                           rdfs:subClassOf eco:Problem .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/ErrorMechanism
+eco:ErrorMechanism rdf:type owl:Class ;
+                   rdfs:subClassOf eco:Problem .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/Event
+eco:Event rdf:type owl:Class .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/Middleware
+eco:Middleware rdf:type owl:Class ;
+               rdfs:subClassOf eco:Software .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/Problem
+eco:Problem rdf:type owl:Class .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/ProblemWithEnviromentPhysics
+eco:ProblemWithEnviromentPhysics rdf:type owl:Class ;
+                                 rdfs:subClassOf eco:Problem .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/Service
+eco:Service rdf:type owl:Class ;
+            rdfs:subClassOf eco:Software .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/Software
+eco:Software rdf:type owl:Class ;
+             rdfs:subClassOf seas:FeatureOfInterest ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty eco:hasProblem ;
+                               owl:someValuesFrom eco:Problem
+                             ] .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/SoftwareMalfunction
+eco:SoftwareMalfunction rdf:type owl:Class ;
+                        rdfs:subClassOf eco:Problem .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://www.ia.urjc.es/ontologies/eco/APP1
+eco:APP1 rdf:type owl:NamedIndividual ,
+                  eco:Application ;
+         eco:deployedIn eco:Middleware1 ;
+         eco:isComposedOf eco:S11 ,
+                          eco:S3 ,
+                          eco:S4 ;
+         eco:id "APP1" .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/APP3
+eco:APP3 rdf:type owl:NamedIndividual ,
+                  eco:Application ;
+         eco:isComposedOf eco:S9 ;
+         eco:id "APP3" .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/C1
+eco:C1 rdf:type owl:NamedIndividual ,
+                seas:Connection ;
+       seas:connectsSystem eco:System1 ,
+                           eco:System3 ,
+                           eco:System7 ;
+       eco:id "C1" .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/Middleware1
+eco:Middleware1 rdf:type owl:NamedIndividual ,
+                         eco:Middleware ;
+                eco:deployedIn eco:machine3 ;
+                eco:id "Middleware1" .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/Middleware3
+eco:Middleware3 rdf:type owl:NamedIndividual ,
+                         eco:Middleware ;
+                eco:deployedIn eco:machine7 ;
+                eco:id "Middleware3" .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/S1
+eco:S1 rdf:type owl:NamedIndividual ,
+                eco:Service ;
+       eco:deployedIn eco:machine1 ;
+       eco:remoteConnectionTo eco:S4 ;
+       eco:id "S1" .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/S11
+eco:S11 rdf:type owl:NamedIndividual ,
+                 eco:Service ;
+        eco:deployedIn eco:Middleware1 ;
+        eco:remoteConnectionTo eco:S9 ;
+        eco:id "S11" .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/S2
+eco:S2 rdf:type owl:NamedIndividual ,
+                eco:Service ;
+       eco:id "S2" .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/S3
+eco:S3 rdf:type owl:NamedIndividual ,
+                eco:Service ;
+       eco:id "S3" .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/S4
+eco:S4 rdf:type owl:NamedIndividual ,
+                eco:Service ;
+       eco:deployedIn eco:Middleware1 ;
+       eco:id "S4" .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/S9
+eco:S9 rdf:type owl:NamedIndividual ,
+                eco:Service ;
+       eco:id "S9" .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/System1
+eco:System1 rdf:type owl:NamedIndividual ,
+                     seas:System ;
+            eco:contains eco:machine1 ;
+            eco:id "System1" .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/System3
+eco:System3 rdf:type owl:NamedIndividual ,
+                     seas:System ;
+            eco:contains eco:machine3 ;
+            eco:id "System3" .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/System7
+eco:System7 rdf:type owl:NamedIndividual ,
+                     seas:System ;
+            eco:contains eco:machine7 ;
+            eco:id "System7" .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/machine1
+eco:machine1 rdf:type owl:NamedIndividual ,
+                      eco:ComputingNode ;
+             eco:id "machine1" .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/machine3
+eco:machine3 rdf:type owl:NamedIndividual ,
+                      eco:ComputingNode ;
+             eco:id "machine3" .
+
+
+###  https://www.ia.urjc.es/ontologies/eco/machine7
+eco:machine7 rdf:type owl:NamedIndividual ,
+                      eco:ComputingNode ;
+             eco:id "machine7" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( eco:Application
+                eco:Middleware
+                eco:Service
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
